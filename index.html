@@ -89,9 +89,9 @@ document.getElementById("console1").innerHTML = "Você acorda na pensão, amanha
 //////////////////////////////////////variaveis////////////////////////////////////
 var forsa = 1; 
 var aparensia = -2;
-var saude = 3;
+var saude = 1;
 var energiaMAX = 3; 
-var energia = 3; 
+var energia = 0; 
 var ciga = 1;
 var binga = 0;
 var grana = 3.5;
@@ -107,7 +107,7 @@ document.getElementById("tela1").innerHTML = "Quest for Pingado v1.0";
 document.getElementById("tela2").innerHTML = "FORÇA " + forsa;
 document.getElementById("tela3").innerHTML = "Aparensia " +aparensia;
 document.getElementById("tela4").innerHTML = "SAUDE " + saude + " ENERGIA " + energia +" / " + energiaMAX ;
-document.getElementById("tela5").innerHTML = "Carteira: " + grana + " cigarro " + ciga + " binga " + binga + "%";
+document.getElementById("tela5").innerHTML = "Carteira: R$" + grana + ", cigarro " + ciga + ", binga " + binga + "%";
 }
 //////////////////////////////////////////////TEXTO EQUIPAMENTO///////////////////
 
@@ -115,67 +115,61 @@ document.getElementById("tela5").innerHTML = "Carteira: " + grana + " cigarro " 
 
 ///////////////////////////////////////////////////////////////////////p1
 function p01r01(){
-document.getElementById("console1").innerHTML = "PORRA ENTAO VAMOS MALHAR! O que você vai levar pra academia?";
+document.getElementById("console1").innerHTML = "Você entra no bar e ve tudo quebrado, mesas, garrafas, cadeiras. No canto Bira com seu avental velho e rasgado, tem sangue no nariz e dos seus 4 dentes, 1 está quebrado.";
 document.getElementById("botao1").setAttribute("onclick"," p02r01()");
-document.getElementById("botao1").innerHTML = "regata fininha";
+document.getElementById("botao1").innerHTML = "Minha nossa bira que que aconteceu?";
 document.getElementById("botao2").setAttribute("onclick","p02r02()");
-document.getElementById("botao2").innerHTML = "way protei";
+document.getElementById("botao2").innerHTML = "Me ve um pingado ai Bira.";
 document.getElementById("botao3").setAttribute("onclick","p02r03()");
-document.getElementById("botao3").innerHTML = "aifone para selfes";
+document.getElementById("botao3").innerHTML = "Um pingado e um pastel fiado ae Seu Bira.";
 document.getElementById("botao3").setAttribute("style","visibility:show");
 ficha();
 document.getElementById("intro").setAttribute("style","visibility:hidden");
 document.getElementById("intro").setAttribute("src=","");
 }
-function p01r02(){
-document.getElementById("console1").innerHTML = "GAME OVER!! voce eh muinto fracasado!";
-document.getElementById("botao1").setAttribute("style","visibility:hidden");
-document.getElementById("botao2").setAttribute("style","visibility:hidden");
-ficha();
-document.getElementById("intro").setAttribute("style","visibility:hidden");
-document.getElementById("intro").setAttribute("src=","");
-}
-////////////////////////////////////////////////////////////////////////p2
+
+	/// p2
 function p02r01(){
-document.getElementById("console1").innerHTML = "Você ainda tá muinto frango pra usar a regata fininha...(-1 aparensia). No caminho pra academia um mendigo aparece armado com um tijolo baiano de 8 furo e diz: pasa a grana plaiso.";
-aparensia+=-1;ficha();
+document.getElementById("console1").innerHTML = "Bira: Os panque (punk), viero aqui e quebraro tudo. E levaro minha ultima caxa de leite...";
+ficha();
 document.getElementById("botao1").setAttribute("onclick"," p03r01()");
-document.getElementById("botao1").innerHTML = "sento a porrada no mindigo";
+document.getElementById("botao1").innerHTML = "Malditos punks, preciso do meu pingado.";
 document.getElementById("botao2").setAttribute("onclick","p03r02()");
-document.getElementById("botao2").innerHTML = "entrego a grana";
+document.getElementById("botao2").innerHTML = "Me ve um café preto então...";
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
+
 function p02r02(){
-document.getElementById("console1").innerHTML = "BOUA melior sta preparado. No caminho pra academia um mendigo aparece armado com um tijolo baiano de 8 furo e diz: pasa a grana plaiso.";
-wey+=1;ficha();
+document.getElementById("console1").innerHTML = "Bira começa a chorar. Bira: eles mim arrebentaro e levaro o leite... os panque (punk)...";
+ficha();
 document.getElementById("botao1").setAttribute("onclick"," p03r01()");
-document.getElementById("botao1").innerHTML = "sento a porrada no mindigo";
+document.getElementById("botao1").innerHTML = "Malditos punks, preciso do meu pingado.";
 document.getElementById("botao2").setAttribute("onclick","p03r02()");
-document.getElementById("botao2").innerHTML = "entrego a grana";
+document.getElementById("botao2").innerHTML = "Me ve um café preto então...";
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
 function p02r03(){
-document.getElementById("console1").innerHTML = "Voce vai distraido pra academia fasendo un tercero selfe scrito BORA MALHAR mas nem comesso ainda. Um mendigo selvage aparese do nada e te da uma tijolada e leva sua grana e o aifone.";
-grana=0;aifone=0;energia+=-1;ficha();
-document.getElementById("botao1").setAttribute("onclick"," p04r01()");
-document.getElementById("botao1").innerHTML = "continuar";
-document.getElementById("botao2").setAttribute("style","visibility:hidden");
+document.getElementById("console1").innerHTML = "Desgraçado, fiado aqui é só pra chegado. Os panque (punk), me arrebentaro e levaro todo o leite.";
+ficha();
+document.getElementById("botao1").setAttribute("onclick"," p03r01()");
+document.getElementById("botao1").innerHTML = "Malditos punks, preciso do meu pingado.";
+document.getElementById("botao2").setAttribute("onclick","p03r02()");
+document.getElementById("botao2").innerHTML = "Me ve um café preto então...";
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
+
 /////////////////////////////////////////////////////////////////////p3
 function p03r01(){
-document.getElementById("console1").innerHTML = "Ta locao mermao? vc ta framgo aimda. mindigo te da um pau e leva sua grana.";
-energia+=-3;grana=0;ficha();
-document.getElementById("botao1").setAttribute("onclick"," p04r01()");
-document.getElementById("botao1").innerHTML = "continuar para academia";
+document.getElementById("console1").innerHTML = "bora pro quebra pau!";
+ficha();
+document.getElementById("botao1").setAttribute("style","visibility:hidden");
 document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
 function p03r02(){
-document.getElementById("console1").innerHTML = "O sacana pega os dolars e sai fora. Ese mindigo nau perde por espera.";
-grana=0;ficha();
-document.getElementById("botao1").setAttribute("onclick"," p04r01()");
-document.getElementById("botao1").innerHTML = "continuar para academia";
+document.getElementById("console1").innerHTML = "Você vira o café preto e grita: bora pro quebra pau!";
+grana-=2;ficha();
+document.getElementById("botao1").setAttribute("style","visibility:hidden");
 document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
 }
