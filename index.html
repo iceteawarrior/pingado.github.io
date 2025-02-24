@@ -29,7 +29,20 @@
   margin: 0px;
   padding: 0px;
   height: 40%;
-  width: 100%;
+  width: 50%;
+  line-height: 0.9;
+} 
+.tela2 {
+  font-size: ;
+  position: absolute;
+  top:0%;
+  right: 0px;
+  background-color: gray;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+  height: 40%;
+  width: 50%;
   line-height: 0.9;
 } 
 .controle {
@@ -54,9 +67,14 @@
 <p id="tela3"align="left" style="font-size:40px"></p>
 <p id="tela4"align="left" style="font-size:40px"></p>
 <p id="tela5"align="left" style="font-size:30px"></p>
-<img id="intro" src="1.png" width="50%"  height="50%" float="right" >
+
 </div>
+
+<div class="tela2"> 
+<img id="intro" src="1.png" width="100%"  height="100%" align="right"  float="right" >
 </div>
+
+
 <div class="controle">
 <p id="console1" align="center" style="font-size:60px" ></p>
 <button class="button" id="botao1" onclick="p01r01()" >Bora tomar um pingado...</button>
@@ -124,6 +142,7 @@ document.getElementById("botao2").setAttribute("style","visibility:show");
 document.getElementById("botao3").setAttribute("onclick","p02r03()");
 document.getElementById("botao3").innerHTML = "Um pingado e um pastel fiado ae Seu Bira.";
 document.getElementById("botao3").setAttribute("style","visibility:show");
+document.getElementById("intro").setAttribute("src","2.png");	
 ficha();
 
 }
@@ -137,7 +156,7 @@ document.getElementById("botao1").innerHTML = "Malditos punks, preciso do meu pi
 document.getElementById("botao2").setAttribute("onclick","p03r02()");
 document.getElementById("botao2").innerHTML = "Me ve um café preto então...";
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
-document.getElementById("intro").setAttribute("src","2.png");	//ultima
+document.getElementById("intro").setAttribute("src","3.png");	
 }
 
 function p02r02(){
@@ -148,6 +167,7 @@ document.getElementById("botao1").innerHTML = "Malditos punks, preciso do meu pi
 document.getElementById("botao2").setAttribute("onclick","p03r02()");
 document.getElementById("botao2").innerHTML = "Me ve um café preto então...";
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
+document.getElementById("intro").setAttribute("src","3.png");
 }
 function p02r03(){
 document.getElementById("console1").innerHTML = "Desgraçado, fiado aqui é só pra chegado. Os panque (punk), me arrebentaro e levaro todo o leite.";
@@ -157,6 +177,7 @@ document.getElementById("botao1").innerHTML = "Malditos punks, preciso do meu pi
 document.getElementById("botao2").setAttribute("onclick","p03r02()");
 document.getElementById("botao2").innerHTML = "Me ve um café preto então...";
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
+document.getElementById("intro").setAttribute("src","3.png");
 }
 
 /////////////////////////////////////////////////////////////////////p3
@@ -166,6 +187,7 @@ ficha();
 document.getElementById("botao1").setAttribute("style","visibility:hidden");
 document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
+document.getElementById("intro").setAttribute("src","4.png");
 }
 function p03r02(){
 document.getElementById("console1").innerHTML = "Você vira o café preto e grita: bora pro quebra pau!";
@@ -173,6 +195,7 @@ grana-=2;ficha();
 document.getElementById("botao1").setAttribute("style","visibility:hidden");
 document.getElementById("botao2").setAttribute("style","visibility:hidden");
 document.getElementById("botao3").setAttribute("style","visibility:hidden");
+document.getElementById("intro").setAttribute("src","4.png");
 }
 //////////////////////////////////////////////////////////////p4
 
